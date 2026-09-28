@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Exercise {
+  id        Int          @id @default(autoincrement())
+  name      String       @unique
+  muscle    String
+  // 既定の重量 (kg)。null は自重
+  weight    Float?
+  reps      Int
+  logs      WorkoutLog[]
+  createdAt DateTime     @default(now())
+
+  @@index([muscle])
+}
+
+model WorkoutLog {
+  id          Int      @id @default(autoincrement())
+  exercise    Exercise @relation(fields: [exerciseId], references: [id], onDelete: Cascade)
+  exerciseId  Int
+  weight      Float?
+  reps        Int
+  performedAt DateTime @default(now())
+
+  @@index([performedAt])
+}
