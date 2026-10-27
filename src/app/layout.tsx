@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import BottomNav from "@/components/BottomNav";
+import AIChatWidget from "@/components/AIChatWidget"; // 1. Импортлох
 import "./globals.css";
 
 const geistSans = Geist({
@@ -21,10 +22,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <body className="min-h-full font-sans">
+      <body className="min-h-full font-sans bg-zinc-950 text-white relative">
         <main className="p-6 pb-32">
           <div className="max-w-md mx-auto space-y-6">{children}</div>
         </main>
+
+        {/* 2. Баруун доод буланд байрлах AI Chatbot */}
+        <AIChatWidget />
+
+        {/* Доод навигацийн цэс */}
         <BottomNav />
       </body>
     </html>

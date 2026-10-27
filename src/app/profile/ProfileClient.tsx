@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation"; // 1. Router импортолж оруулна
+import { useRouter } from "next/navigation";
 import {
   User,
   Mail,
@@ -38,7 +38,7 @@ interface ProfileClientProps {
 }
 
 export default function ProfileClient({ initialProfile }: ProfileClientProps) {
-  const router = useRouter(); // 2. Router хувьсагчийг зарлана
+  const router = useRouter();
   const [profile, setProfile] = useState<UserProfile>(initialProfile);
   const [isEditing, setIsEditing] = useState(false);
   const [isLoggingOut, setIsLoggingOut] = useState(false);
@@ -67,11 +67,11 @@ export default function ProfileClient({ initialProfile }: ProfileClientProps) {
     setIsEditing(false);
   };
 
-  // 3. Logout хийх функц
+  // Logout хийж /login руу шилжүүлэх функц
   const handleLogout = async () => {
     setIsLoggingOut(true);
     try {
-      // Хэрэв Firebase Auth ашиглаж байгаа бол:
+      // Firebase Auth ашиглаж байгаа бол:
       // await signOut(auth);
 
       // Login хуудас руу шилжүүлэх
@@ -255,7 +255,7 @@ export default function ProfileClient({ initialProfile }: ProfileClientProps) {
         </div>
       </div>
 
-      {/* 4. Шинэчлэгдсэн Logout хэсэг */}
+      {/* 4. Logout Товчлуур */}
       <div className="flex justify-end pt-2">
         <button
           onClick={handleLogout}

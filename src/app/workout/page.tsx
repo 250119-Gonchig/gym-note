@@ -149,7 +149,7 @@ export default function WorkoutsPage() {
                 <Play className="w-12 h-12 text-zinc-600" />
                 <div>
                   <p className="text-xs text-amber-400 font-medium">
-                    YouTube Link суулгаагүй байна
+                    YouTubeへのリンクはありません。
                   </p>
                   <p className="text-[11px] text-zinc-500 mt-1">
                     `workoutList` массив дахь `youtubeId` эсвэл `youtubeUrl` дээр линк оруулна уу.
@@ -180,7 +180,7 @@ export default function WorkoutsPage() {
                 onClick={() => setSelectedExercise(null)}
                 className="flex-1 bg-emerald-500 hover:bg-emerald-600 text-zinc-950 font-bold text-xs py-3 rounded-xl transition-all shadow-lg shadow-emerald-500/10"
               >
-                Бэлтгэлийг дуусгах (Complete)
+                Complete
               </button>
             </div>
           </div>

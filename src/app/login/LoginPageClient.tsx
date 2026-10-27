@@ -67,7 +67,7 @@ export default function LoginPageClient() {
         </div>
         <h1 className="text-2xl font-black text-white tracking-wide">Gym Note</h1>
         <p className="text-xs text-zinc-400">
-          {isSignUp ? "新規アカウント作成 (Шинэ бүртгэл)" : "ログイン (Нэвтрэх)"}
+          {isSignUp ? "新規アカウント作成 (Шинэ бүртгэл)" : "ログイン (login)"}
         </p>
       </div>
 
@@ -98,7 +98,7 @@ export default function LoginPageClient() {
               d="M12 23c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.2-6.4-5.2L1.9 16C3.7 19.7 7.5 23 12 23z"
             />
           </svg>
-          Google で継続 (Google-ээр үргэлжлүүлэх)
+          Google で継続 (Continue with Google)
         </button>
 
         <button
@@ -111,7 +111,7 @@ export default function LoginPageClient() {
           <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
           </svg>
-          Facebook で継続 (Facebook-ээр үргэлжлүүлэх)
+          Facebook で継続 (Continue with Facebook)
         </button>
       </div>
 
@@ -119,7 +119,7 @@ export default function LoginPageClient() {
       <div className="relative flex items-center justify-center">
         <div className="border-t border-zinc-800 w-full" />
         <span className="bg-zinc-900 px-3 text-[10px] font-bold text-zinc-500 uppercase tracking-widest absolute">
-          または (Эсвэл)
+          または (or)
         </span>
       </div>
 
@@ -127,7 +127,7 @@ export default function LoginPageClient() {
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="text-xs font-medium text-zinc-400 block mb-1.5">
-            メールアドレス (Имэйл хаяг)
+            メールアドレス (email address)
           </label>
           <div className="relative">
             <Mail className="w-4 h-4 text-zinc-500 absolute left-3.5 top-3.5" />
@@ -144,7 +144,7 @@ export default function LoginPageClient() {
 
         <div>
           <label className="text-xs font-medium text-zinc-400 block mb-1.5">
-            パスワード (Нууц үг)
+            パスワード (password)
           </label>
           <div className="relative">
             <Lock className="w-4 h-4 text-zinc-500 absolute left-3.5 top-3.5" />
@@ -171,7 +171,7 @@ export default function LoginPageClient() {
           disabled={loading}
           className="w-full bg-emerald-500 hover:bg-emerald-600 text-zinc-950 font-bold text-xs py-3 rounded-xl transition-all shadow-lg shadow-emerald-500/10 mt-2 disabled:opacity-50"
         >
-          {isSignUp ? "アカウント作成 (Бүртгүүлэх)" : "ログイン (Нэвтрэх)"}
+          {isSignUp ? "アカウント作成 (Бүртгүүлэх)" : "ログイン (Login)"}
         </button>
       </form>
 
@@ -183,9 +183,9 @@ export default function LoginPageClient() {
           className="text-xs text-zinc-400 hover:text-emerald-400 transition-colors"
         >
           {isSignUp ? (
-            <span>すでにアカウントをお持ちですか？ ログイン (Нэвтрэх)</span>
+            <span>すでにアカウントをお持ちですか？ ログイン (Login)</span>
           ) : (
-            <span>アカウントをお持ちでないですか？ 新規登録 (Бүртгүүлэх)</span>
+            <span>アカウントをお持ちでないですか？ 新規登録 (Sign in)</span>
           )}
         </button>
       </div>
